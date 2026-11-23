@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Kontak | AMÉLIA RYUL</title>
+        <link href="css/amelia_style.css" rel="stylesheet"/>
+        <script defer="True" src="js/amelia_script.js">
+        </script>
+    </head>
+
+    <body>
+        <!-- Bar pengumuman -->
+        <div class="amelia_announcement">
+            <p>BUNGA YANG BISA DIRASAKAN.</p>
+        </div>
+
+        <!-- Header dan navigasi -->
+        <header class="amelia_header" id="amelia_header">
+            <div class="amelia_container amelia_header_inner">
+                <a class="amelia_logo" href="index.html">AMÉLIA <span>RYUL</span></a>
+
+                <button aria-expanded="false" aria-label="Buka menu navigasi" class="amelia_menu_toggle" id="amelia_menu_toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav aria-label="Navigasi utama" class="amelia_nav" id="amelia_nav">
+                    <a class="amelia_nav_link" href="index.html">BERANDA</a>
+                    <a class="amelia_nav_link" href="shop.html">TOKO</a>
+                    <a class="amelia_nav_link" href="collections.html">KOLEKSI</a>
+                    <a class="amelia_nav_link" href="custom.html">PESAN KHUSUS</a>
+                    <a class="amelia_nav_link" href="about.html">TENTANG KAMI</a>
+                    <a class="amelia_nav_link" href="journal.html">JURNAL</a>
+                    <a class="amelia_nav_link amelia_active" href="contact.html">KONTAK</a>
+                </nav>
+
+                <button class="amelia_bag_link amelia_cart_open" id="amelia_cart_open" type="button" aria-label="Buka keranjang belanja" title="Keranjang belanja">
+                    <svg class="amelia_cart_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 1.9-1.5L21 8H6"/><circle cx="9.5" cy="19" r="1.3"/><circle cx="17.5" cy="19" r="1.3"/></svg>
+                    <span class="amelia_cart_count" id="amelia_cart_count">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Konten utama -->
+        <main id="amelia_main">
+            <!-- Pengantar halaman kontak -->
+            <section class="amelia_contact_intro amelia_container">
+                <p class="amelia_eyebrow">KAMI SENANG MENDENGAR DARIMU</p>
+
+                <h1>
+                    Let's talk
+                    <br/>
+                    <em>flowers.</em>
+                </h1>
+
+                <p>
+                    Punya pertanyaan, ide, atau ingin membuat sesuatu yang spesial?
+                    Kirim pesan kepada kami.
+                </p>
+            </section>
+
+            <!-- Informasi kontak dan formulir pesan -->
+            <section class="amelia_contact_section amelia_container">
+                <!-- Informasi kontak -->
+                <div class="amelia_contact_details">
+                    <p class="amelia_eyebrow">GET IN TOUCH</p>
+
+                    <h2>Say hello.</h2>
+
+                    <p>
+                        Untuk pertanyaan tentang produk, pesanan, atau kolaborasi,
+                        isi formulir di samping.
+                    </p>
+
+                    <!-- Informasi WhatsApp -->
+                    <div class="amelia_contact_item">
+                        <span>WHATSAPP</span>
+                        <p>
+                            <a class="amelia_whatsapp_link" href="#" id="amelia_contact_whatsapp_link">
+                                Chat langsung dengan kami &nearrow;
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Informasi Instagram -->
+                    <div class="amelia_contact_item">
+                        <span>INSTAGRAM</span>
+                        <p>@gntnamly.ryuls flowers</p>
+                    </div>
+
+                    <!-- Jam operasional -->
+                    <div class="amelia_contact_item">
+                        <span>JAM OPERASIONAL</span>
+                        <p>Senin&ndash;Sabtu &middot; 09.00&ndash;17.00</p>
+                    </div>
+                </div>
+
+                <!-- Formulir kontak -->
+                <form class="amelia_form_card" id="amelia_contact_form">
+                    <h2>Kirim Pesan</h2>
+
+                    <!-- Input nama lengkap -->
+                    <label for="amelia_contact_name">Nama lengkap</label>
+                    <input id="amelia_contact_name" minlength="3" name="name" placeholder="Nama kamu" required="" type="text"/>
+
+                    <!-- Input nomor WhatsApp -->
+                    <label for="amelia_contact_whatsapp">Nomor WhatsApp</label>
+                    <input id="amelia_contact_whatsapp" name="whatsapp" pattern="[0-9+() -]{9,18}" placeholder="08xxxxxxxxxx" required="" type="tel"/>
+
+                    <!-- Pilihan topik pesan -->
+                    <label for="amelia_contact_subject">Topik</label>
+                    <select id="amelia_contact_subject" name="subject" required="">
+                        <option value="">Pilih topik</option>
+                        <option>Informasi produk</option>
+                        <option>Pesanan</option>
+                        <option>Buket kustom</option>
+                        <option>Kolaborasi</option>
+                        <option>Lainnya</option>
+                    </select>
+
+                    <!-- Input isi pesan -->
+                    <label for="amelia_contact_message">Pesan</label>
+                    <textarea id="amelia_contact_message" minlength="10" name="message" placeholder="Tulis pesanmu di sini..." required="" rows="5"></textarea>
+
+                    <!-- Tombol kirim pesan -->
+                    <button class="amelia_button amelia_button_dark" type="submit">
+                        KIRIM PESAN &nearrow;
+                    </button>
+
+                    <!-- Feedback formulir -->
+                    <p class="amelia_form_feedback" id="amelia_contact_feedback" role="status"></p>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="amelia_footer">
+            <div class="amelia_container amelia_footer_grid">
+                <!-- Identitas brand -->
+                <div class="amelia_footer_brand">
+                    <a class="amelia_logo amelia_logo_footer" href="index.html">AMÉLIA <span>RYUL</span></a>
+                    <p>Bunga dengan Karakter.</p>
+                </div>
+
+                <!-- Navigasi footer -->
+                <div class="amelia_footer_column">
+                    <h2>JELAJAHI</h2>
+                    <a href="shop.html">Toko</a>
+                    <a href="collections.html">Koleksi</a>
+                    <a href="custom.html">Buket Kustom</a>
+                    <a href="about.html">Tentang Kami</a>
+                </div>
+
+                <!-- Kontak footer -->
+                <div class="amelia_footer_column">
+                    <h2>HUBUNGI</h2>
+                    <a href="journal.html">Jurnal</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+            </div>
+
+            <!-- Footer bagian bawah -->
+            <div class="amelia_container amelia_footer_bottom">
+                <p>&copy; 2026 AMÉLIA RYUL. HAK CIPTA DILINDUNGI.</p>
+                <p>BUNGA DENGAN KARAKTER.</p>
+            </div>
+        </footer>
+    </body>
+</html>

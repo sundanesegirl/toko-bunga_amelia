@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Katalog Bunga | AMÉLIA RYUL</title>
+        <link href="css/amelia_style.css" rel="stylesheet"/>
+        <script defer="True" src="js/amelia_script.js"></script>
+    </head>
+    <body>
+        <!-- Bar pengumuman -->
+        <div class="amelia_announcement">
+            <p>BUNGA YANG BISA DIRASAKAN.</p>
+        </div>
+
+        <!-- Header dan navigasi -->
+        <header class="amelia_header" id="amelia_header">
+            <div class="amelia_container amelia_header_inner">
+                <a class="amelia_logo" href="index.html">AMÉLIA <span>RYUL</span></a>
+
+                <button aria-expanded="false" aria-label="Buka menu navigasi" class="amelia_menu_toggle" id="amelia_menu_toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav aria-label="Navigasi utama" class="amelia_nav" id="amelia_nav">
+                    <a class="amelia_nav_link" href="index.html">BERANDA</a>
+                    <a class="amelia_nav_link amelia_active" href="shop.html">TOKO</a>
+                    <a class="amelia_nav_link" href="collections.html">KOLEKSI</a>
+                    <a class="amelia_nav_link" href="custom.html">PESAN KHUSUS</a>
+                    <a class="amelia_nav_link" href="about.html">TENTANG KAMI</a>
+                    <a class="amelia_nav_link" href="journal.html">JURNAL</a>
+                    <a class="amelia_nav_link" href="contact.html">KONTAK</a>
+                </nav>
+
+                <button class="amelia_bag_link amelia_cart_open" id="amelia_cart_open" type="button" aria-label="Buka keranjang belanja" title="Keranjang belanja">
+                    <svg class="amelia_cart_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 1.9-1.5L21 8H6"/><circle cx="9.5" cy="19" r="1.3"/><circle cx="17.5" cy="19" r="1.3"/></svg>
+                    <span class="amelia_cart_count" id="amelia_cart_count">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Konten katalog toko -->
+        <main id="amelia_main">
+            <section class="amelia_shop_intro amelia_container">
+                <p class="amelia_eyebrow">KATALOG BUNGA / 01</p>
+
+                <h1>
+                    Temukan
+                    <em>bungamu.</em>
+                </h1>
+
+                <p class="amelia_shop_description">
+                    Buket pilihan untuk setiap perasaan. Dirangkai dengan tangan
+                    untuk menciptakan kesan yang tak terlupakan.
+                </p>
+            </section>
+
+            <!-- Pencarian, filter kategori, dan pengurutan produk -->
+            <section aria-label="Kontrol katalog bunga" class="amelia_shop_controls amelia_container">
+                <div class="amelia_control_group amelia_search_group">
+                    <label for="amelia_product_search">CARI BUNGA</label>
+                    <input class="amelia_search_input" id="amelia_product_search" placeholder="Cari nama buket..." type="search"/>
+                </div>
+
+                <div class="amelia_control_group">
+                    <label for="amelia_category_filter">KATEGORI</label>
+                    <select class="amelia_select" id="amelia_category_filter">
+                        <option value="all">Semua bunga</option>
+                        <option value="soft">Nuansa Lembut</option>
+                        <option value="bold">Nuansa Berani</option>
+                        <option value="romance">Nuansa Romantis</option>
+                        <option value="celebration">Perayaan</option>
+                    </select>
+                </div>
+
+                <div class="amelia_control_group">
+                    <label for="amelia_sort_products">URUTKAN</label>
+                    <select class="amelia_select" id="amelia_sort_products">
+                        <option value="featured">Pilihan unggulan</option>
+                        <option value="low">Harga: termurah</option>
+                        <option value="high">Harga: termahal</option>
+                        <option value="name">Nama: A&ndash;Z</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="amelia_container amelia_shop_catalog">
+                <div class="amelia_shop_result_line">
+                    <p>KATALOG BUNGA</p>
+                    <span id="amelia_product_result">8 produk</span>
+                </div>
+
+                <div class="amelia_product_grid amelia_shop_grid" id="amelia_shop_products">
+                    <!-- Produk 1 -->
+                    <article class="amelia_product_card" data-category="soft" data-name="Soft Hour" data-price="285000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Soft Hour bouquet" src="foto\softhour.jpeg"/>
+                            <span class="amelia_product_tag">TERLARIS</span>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Soft Hour</a></h3>
+                                <p>NUANSA LEMBUT</p>
+                            </div>
+                            <span>Rp285.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Soft Hour" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 2 -->
+                    <article class="amelia_product_card" data-category="bold" data-name="Sun Theory" data-price="320000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Sun Theory bouquet" src="foto\suntheory.jpeg"/>
+                            <span class="amelia_product_tag">BARU</span>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Sun Theory</a></h3>
+                                <p>NUANSA BERANI</p>
+                            </div>
+                            <span>Rp320.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Sun Theory" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 3 -->
+                    <article class="amelia_product_card" data-category="romance" data-name="Afterglow" data-price="350000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Afterglow bouquet" src="foto\afterglow.jpeg"/>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Afterglow</a></h3>
+                                <p>NUANSA ROMANTIS</p>
+                            </div>
+                            <span>Rp350.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Afterglow" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 4 -->
+                    <article class="amelia_product_card" data-category="soft" data-name="Pure Form" data-price="245000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Pure Form bouquet" src="foto\pureform.jpeg"/>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Pure Form</a></h3>
+                                <p>NUANSA LEMBUT</p>
+                            </div>
+                            <span>Rp245.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Pure Form" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 5 -->
+                    <article class="amelia_product_card" data-category="celebration" data-name="Sunday Celebration" data-price="395000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Sunday Celebration flowers" src="foto\mix.jpeg"/>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Sunday Celebration</a></h3>
+                                <p>PERAYAAN</p>
+                            </div>
+                            <span>Rp395.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Sunday Celebration" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 6 -->
+                    <article class="amelia_product_card" data-category="romance" data-name="Velvet Crush" data-price="420000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Velvet Crush bouquet" src="foto\pink.jpeg"/>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Velvet Crush</a></h3>
+                                <p>NUANSA ROMANTIS</p>
+                            </div>
+                            <span>Rp420.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Velvet Crush" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 7 -->
+                    <article class="amelia_product_card" data-category="bold" data-name="Wild Thing" data-price="310000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Wild Thing bouquet" src="foto\burgundy.jpeg"/>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Wild Thing</a></h3>
+                                <p>NUANSA BERANI</p>
+                            </div>
+                            <span>Rp310.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Wild Thing" type="button">TAMBAH KE TAS +</button>
+                    </article>
+
+                    <!-- Produk 8 -->
+                    <article class="amelia_product_card" data-category="soft" data-name="Cloud Nine" data-price="275000">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Cloud Nine bouquet" src="foto\ivory.jpeg"/>
+                        </a>
+
+                        <div class="amelia_product_info">
+                            <div>
+                                <h3><a href="product.html">Cloud Nine</a></h3>
+                                <p>NUANSA LEMBUT</p>
+                            </div>
+                            <span>Rp275.000</span>
+                        </div>
+
+                        <button class="amelia_add_button" data-product="Cloud Nine" type="button">TAMBAH KE TAS +</button>
+                    </article>
+                </div>
+
+                <p class="amelia_no_products" hidden="" id="amelia_no_products">
+                    Bunga yang cocok tidak ditemukan. Coba kata kunci lain.
+                </p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="amelia_footer">
+            <div class="amelia_container amelia_footer_grid">
+                <div class="amelia_footer_brand">
+                    <a class="amelia_logo amelia_logo_footer" href="index.html">AMÉLIA <span>RYUL</span></a>
+                    <p>Bunga dengan Karakter.</p>
+                </div>
+
+                <div class="amelia_footer_column">
+                    <h2>JELAJAHI</h2>
+                    <a href="shop.html">Toko</a>
+                    <a href="collections.html">Koleksi</a>
+                    <a href="custom.html">Buket Kustom</a>
+                    <a href="about.html">Tentang Kami</a>
+                </div>
+
+                <div class="amelia_footer_column">
+                    <h2>HUBUNGI</h2>
+                    <a href="journal.html">Jurnal</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+            </div>
+
+            <div class="amelia_container amelia_footer_bottom">
+                <p>&copy; 2026 AMÉLIA RYUL. HAK CIPTA DILINDUNGI.</p>
+                <p>BUNGA DENGAN KARAKTER.</p>
+            </div>
+        </footer>
+    </body>
+</html>

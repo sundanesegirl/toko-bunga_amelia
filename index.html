@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AMÉLIA RYUL | Bunga dengan Karakter</title>
+    <meta content="AMÉLIA RYUL — Boutik bunga modern. Bunga untuk setiap perasaan dan momen." name="description"/>
+    <link href="css/amelia_style.css" rel="stylesheet"/>
+    <script defer="True" src="js/amelia_script.js"></script>
+</head>
+    <body>
+        <!-- Bar pengumuman -->
+        <div class="amelia_announcement">
+            <p>SESUATU YANG INDAH — BUNGA UNTUK DIRASAKAN.</p>
+        </div>
+
+        <!-- Header dan navigasi -->
+        <header class="amelia_header" id="amelia_header">
+            <div class="amelia_container amelia_header_inner">
+                <a aria-label="Beranda Amélia Ryul" class="amelia_logo" href="index.html">AMÉLIA <span>RYUL</span></a>
+
+                <button aria-expanded="false" aria-label="Buka menu navigasi" class="amelia_menu_toggle" id="amelia_menu_toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav aria-label="Navigasi utama" class="amelia_nav" id="amelia_nav">
+                    <a class="amelia_nav_link amelia_active" href="index.html">BERANDA</a>
+                    <a class="amelia_nav_link" href="shop.html">TOKO</a>
+                    <a class="amelia_nav_link" href="collections.html">KOLEKSI</a>
+                    <a class="amelia_nav_link" href="custom.html">PESAN KHUSUS</a>
+                    <a class="amelia_nav_link" href="about.html">TENTANG KAMI</a>
+                    <a class="amelia_nav_link" href="journal.html">JURNAL</a>
+                    <a class="amelia_nav_link" href="contact.html">KONTAK</a>
+                </nav>
+
+                <button class="amelia_bag_link amelia_cart_open" id="amelia_cart_open" type="button" aria-label="Buka keranjang belanja" title="Keranjang belanja">
+                    <svg class="amelia_cart_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 1.9-1.5L21 8H6"/><circle cx="9.5" cy="19" r="1.3"/><circle cx="17.5" cy="19" r="1.3"/></svg>
+                    <span class="amelia_cart_count" id="amelia_cart_count">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Konten utama beranda -->
+        <main id="amelia_main">
+            <!-- Bagian utama -->
+            <section class="amelia_hero amelia_container">
+                <div class="amelia_hero_text">
+                    <p class="amelia_eyebrow">BOUTIK BUNGA MODERN</p>
+                    <h1>Bunga yang berbicara <em>tanpa kata.</em></h1>
+                    <p class="amelia_hero_description">Bunga untuk setiap perasaan, momen, dan versi dirimu.</p>
+                    <a class="amelia_button amelia_button_dark" href="shop.html">BELANJA BUNGA <span>&nearrow;</span></a>
+                    <p class="amelia_hero_note">BUNGA DENGAN KARAKTER.</p>
+                </div>
+
+                <div class="amelia_hero_image_wrap">
+                    <img alt="Rangkaian bunga editorial bernuansa burgundy dan ivory" class="amelia_hero_image" src="foto\beranda.jpeg"/>
+                    <div class="amelia_image_label">SENI MERANGKAI BUNGA<br/>01 / AMÉLIA RYUL</div>
+                </div>
+            </section>
+
+            <!-- Produk unggulan -->
+            <section class="amelia_section amelia_container" id="amelia_featured">
+                <div class="amelia_section_heading">
+                    <div>
+                        <p class="amelia_eyebrow">PILIHAN UNTUKMU</p>
+                        <h2>KATALOG BUNGA</h2>
+                    </div>
+                    <a class="amelia_text_link" href="shop.html">LIHAT SEMUA BUNGA &nearrow;</a>
+                </div>
+
+                <div class="amelia_product_grid">
+                    <article class="amelia_product_card">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Buket Afterglow bernuansa burgundy" src="foto\afterglow.jpeg"/>
+                            <span class="amelia_product_badge">TERLARIS</span>
+                        </a>
+                        <div class="amelia_product_info">
+                            <h3>AFTERGLOW</h3>
+                            <p>Rp 285.000</p>
+                        </div>
+                    </article>
+
+                    <article class="amelia_product_card">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Buket bunga calla lily putih Pure Form" src="foto\pureform.jpeg"/>
+                        </a>
+                        <div class="amelia_product_info">
+                            <h3>PURE FORM</h3>
+                            <p>Rp 220.000</p>
+                        </div>
+                    </article>
+
+                    <article class="amelia_product_card">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Buket mawar merah muda Soft Hour" src="foto\softhour.jpeg"/>
+                            <span class="amelia_product_badge">BARU</span>
+                        </a>
+                        <div class="amelia_product_info">
+                            <h3>SOFT HOUR</h3>
+                            <p>Rp 195.000</p>
+                        </div>
+                    </article>
+
+                    <article class="amelia_product_card">
+                        <a class="amelia_product_image_link" href="product.html">
+                            <img alt="Buket bernuansa kuning dan oranye Sun Theory" src="foto\suntheory.jpeg"/>
+                        </a>
+                        <div class="amelia_product_info">
+                            <h3>SUN THEORY</h3>
+                            <p>Rp 240.000</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Koleksi -->
+            <section class="amelia_section amelia_collections_section">
+                <div class="amelia_container">
+                    <div class="amelia_section_heading amelia_heading_center">
+                        <div>
+                            <p class="amelia_eyebrow">TEMUKAN BUNGAMU</p>
+                            <h2>BUNGA SESUAI GAYAMU.</h2>
+                            <p class="amelia_section_intro">Setiap suasana hati punya bunganya sendiri.</p>
+                        </div>
+                    </div>
+
+                    <div class="amelia_collection_grid">
+                        <a class="amelia_collection_card" href="collections.html">
+                            <img alt="Burgundy flowers from Nuansa Berani" src="foto\burgundy.jpeg"/>
+                            <div class="amelia_collection_overlay">
+                                <h3>NUANSA BERANI</h3>
+                                <p>Berani. Dramatis. Penuh karakter.</p>
+                                <span>JELAJAHI &nearrow;</span>
+                            </div>
+                        </a>
+
+                        <a class="amelia_collection_card" href="collections.html">
+                            <img alt="Ivory flowers from Nuansa Lembut" src="foto\ivory.jpeg"/>
+                            <div class="amelia_collection_overlay">
+                                <h3>NUANSA LEMBUT</h3>
+                                <p>Tenang. Abadi. Sederhana.</p>
+                                <span>JELAJAHI &nearrow;</span>
+                            </div>
+                        </a>
+
+                        <a class="amelia_collection_card" href="collections.html">
+                            <img alt="Pink flowers from Nuansa Romantis" src="foto\pink.jpeg"/>
+                            <div class="amelia_collection_overlay">
+                                <h3>NUANSA ROMANTIS</h3>
+                                <p>Untuk kisah cinta kecil yang berkesan.</p>
+                                <span>JELAJAHI &nearrow;</span>
+                            </div>
+                        </a>
+
+                        <a class="amelia_collection_card" href="collections.html">
+                            <img alt="Bunga warna-warni dari koleksi Perayaan" src="foto\mix.jpeg"/>
+                            <div class="amelia_collection_overlay">
+                                <h3>KOLEKSI PERAYAAN</h3>
+                                <p>Untuk momen yang layak dirayakan.</p>
+                                <span>JELAJAHI &nearrow;</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cerita merek -->
+            <section class="amelia_story_section amelia_container">
+                <div class="amelia_story_image">
+                    <img alt="Rangkaian bunga artistik di studio" src="foto\studio.jpeg"/>
+                </div>
+
+                <div class="amelia_story_content">
+                    <p class="amelia_eyebrow">BUNGA BUKAN SEKADAR BUNGA.</p>
+                    <h2>Dibuat untuk memiliki <em>makna.</em></h2>
+                    <p>We create flowers that express feelings, personalities, and moments worth remembering. A little unexpected, always intentional.</p>
+                    <a class="amelia_text_link" href="about.html">CERITA KAMI &nearrow;</a>
+                </div>
+            </section>
+
+            <!-- Ajakan buket kustom -->
+            <section class="amelia_custom_cta amelia_container">
+                <div class="amelia_custom_cta_image">
+                    <img alt="Inspirasi rangkaian bunga kustom" src="foto\inspirasi.jpeg"/>
+                </div>
+
+                <div class="amelia_custom_cta_content">
+                    <p class="amelia_eyebrow">DIBUAT KHUSUS UNTUKMU</p>
+                    <h2>Buket yang <em>mencerminkan dirimu.</em></h2>
+                    <p>Bungamu. Warnamu. Ceritamu.</p>
+                    <a class="amelia_button amelia_button_light" href="custom.html">BUAT BUKETMU &nearrow;</a>
+                </div>
+            </section>
+
+            <!-- Testimoni -->
+            <section class="amelia_section amelia_container amelia_testimonials">
+                <div class="amelia_section_heading">
+                    <div>
+                        <p class="amelia_eyebrow">KATA-KATA BAIK</p>
+                        <h2>CERITA PELANGGAN.</h2>
+                    </div>
+                </div>
+
+                <div class="amelia_testimonial_grid">
+                    <article class="amelia_testimonial_card">
+                        <p aria-label="5 out of 5 stars" class="amelia_stars">&starf;&starf;&starf;&starf;&starf;</p>
+                        <blockquote>“Bunganya ternyata lebih indah saat dilihat langsung. Rangkaiannya sangat berkesan.”</blockquote>
+                        <p class="amelia_customer">&mdash; PELANGGAN</p>
+                    </article>
+
+                    <article class="amelia_testimonial_card">
+                        <p aria-label="5 out of 5 stars" class="amelia_stars">&starf;&starf;&starf;&starf;&starf;</p>
+                        <blockquote>“Aku suka kemasan, bunga, dan setiap detail kecilnya.”</blockquote>
+                        <p class="amelia_customer">&mdash; PELANGGAN</p>
+                    </article>
+
+                    <article class="amelia_testimonial_card">
+                        <p aria-label="5 out of 5 stars" class="amelia_stars">&starf;&starf;&starf;&starf;&starf;</p>
+                        <blockquote>“Buket ini terasa dibuat khusus untuk momen tersebut.”</blockquote>
+                        <p class="amelia_customer">&mdash; PELANGGAN</p>
+                    </article>
+                </div>
+
+                <p class="amelia_testimonial_note">*Contoh testimoni untuk latihan desain website.</p>
+            </section>
+
+            <!-- Ajakan terakhir -->
+            <section class="amelia_final_cta">
+                <div class="amelia_container">
+                    <p class="amelia_eyebrow">SESUATU YANG INDAH SEDANG MENANTI.</p>
+                    <h2>Temukan bungamu.</h2>
+                    <a class="amelia_button amelia_button_dark" href="shop.html">JELAJAHI KOLEKSI &nearrow;</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="amelia_footer">
+            <div class="amelia_container amelia_footer_grid">
+                <div class="amelia_footer_brand">
+                    <a class="amelia_logo amelia_logo_footer" href="index.html">AMÉLIA <span>RYUL</span></a>
+                    <p>Bunga dengan Karakter.</p>
+                </div>
+
+                <div class="amelia_footer_column">
+                    <h2>JELAJAHI</h2>
+                    <a href="shop.html">Toko</a>
+                    <a href="collections.html">Koleksi</a>
+                    <a href="custom.html">Buket Kustom</a>
+                    <a href="about.html">Tentang Kami</a>
+                </div>
+
+                <div class="amelia_footer_column">
+                    <h2>HUBUNGI</h2>
+                    <a href="journal.html">Jurnal</a>
+                    <a href="contact.html">Kontak</a>
+                    <a aria-label="Instagram link" href="#">Instagram</a>
+                    <a aria-label="WhatsApp link" href="#">WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="amelia_container amelia_footer_bottom">
+                <p>&copy; 2026 AMÉLIA RYUL. HAK CIPTA DILINDUNGI.</p>
+                <p>BUNGA DENGAN KARAKTER.</p>
+            </div>
+        </footer>
+    </body>
+</html>

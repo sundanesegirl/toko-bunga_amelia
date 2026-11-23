@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Jurnal Bunga | AMÉLIA RYUL</title>
+        <link href="css/amelia_style.css" rel="stylesheet"/>
+        <script defer="True" src="js/amelia_script.js">
+        </script>
+    </head>
+
+    <body>
+        <!-- Bar pengumuman -->
+        <div class="amelia_announcement">
+            <p>BUNGA YANG BISA DIRASAKAN.</p>
+        </div>
+
+        <!-- Header dan navigasi -->
+        <header class="amelia_header" id="amelia_header">
+            <div class="amelia_container amelia_header_inner">
+                <a class="amelia_logo" href="index.html">AMÉLIA <span>RYUL</span></a>
+
+                <button aria-expanded="false" aria-label="Buka menu navigasi" class="amelia_menu_toggle" id="amelia_menu_toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav aria-label="Navigasi utama" class="amelia_nav" id="amelia_nav">
+                    <a class="amelia_nav_link" href="index.html">BERANDA</a>
+                    <a class="amelia_nav_link" href="shop.html">TOKO</a>
+                    <a class="amelia_nav_link" href="collections.html">KOLEKSI</a>
+                    <a class="amelia_nav_link" href="custom.html">PESAN KHUSUS</a>
+                    <a class="amelia_nav_link" href="about.html">TENTANG KAMI</a>
+                    <a class="amelia_nav_link amelia_active" href="journal.html">JURNAL</a>
+                    <a class="amelia_nav_link" href="contact.html">KONTAK</a>
+                </nav>
+
+                <button class="amelia_bag_link amelia_cart_open" id="amelia_cart_open" type="button" aria-label="Buka keranjang belanja" title="Keranjang belanja">
+                    <svg class="amelia_cart_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 1.9-1.5L21 8H6"/><circle cx="9.5" cy="19" r="1.3"/><circle cx="17.5" cy="19" r="1.3"/></svg>
+                    <span class="amelia_cart_count" id="amelia_cart_count">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Konten utama -->
+        <main id="amelia_main">
+            <!-- Pengantar jurnal -->
+            <section class="amelia_journal_intro amelia_container">
+                <p class="amelia_eyebrow">CATATAN FLORAL / STORIES &amp; INSPIRATION</p>
+
+                <h1>
+                    The flower
+                    <br/>
+                    <em>journal.</em>
+                </h1>
+
+                <p>Ide, cerita, dan inspirasi kecil dari dunia bunga.</p>
+            </section>
+
+            <!-- Daftar artikel jurnal -->
+            <section class="amelia_journal_grid amelia_container">
+                <!-- Artikel pertama -->
+                <article class="amelia_journal_card">
+                    <img alt="Buket bunga lembut" src="foto\lembut.jpeg"/>
+
+                    <p class="amelia_eyebrow">FLOWER CARE / 01</p>
+
+                    <h2>Merawat Buket agar Lebih Tahan Lama</h2>
+
+                    <p>
+                        Langkah sederhana untuk menjaga bunga potong tetap segar
+                        setelah sampai di rumah.
+                    </p>
+
+                    <button class="amelia_journal_read" data-content="Potong ujung batang sekitar satu sampai dua sentimeter secara diagonal. Gunakan vas bersih dan air segar. Buang daun yang terendam air, ganti air secara rutin, dan letakkan buket jauh dari sinar matahari langsung serta sumber panas." data-title="Merawat Buket agar Lebih Tahan Lama">
+                        BACA CERITA &nearrow;
+                    </button>
+                </article>
+
+                <!-- Artikel kedua -->
+                <article class="amelia_journal_card">
+                    <img alt="Buket romantis" src="foto\romantis.jpeg"/>
+
+                    <p class="amelia_eyebrow">FLOWER MEANING / 02</p>
+
+                    <h2>Warna Bunga dan Maknanya</h2>
+
+                    <p>
+                        Memilih warna buket bisa menjadi cara untuk menyampaikan
+                        pesan tanpa kata.
+                    </p>
+
+                    <button class="amelia_journal_read" data-content="Merah sering diasosiasikan dengan cinta dan keberanian. Pink memberi kesan lembut dan apresiatif. Putih terasa bersih dan tulus. Kuning membawa nuansa ceria, sementara ungu sering memberi kesan elegan dan misterius. Makna dapat berbeda sesuai budaya dan konteks." data-title="Warna Bunga dan Maknanya">
+                        BACA CERITA &nearrow;
+                    </button>
+                </article>
+
+                <!-- Artikel ketiga -->
+                <article class="amelia_journal_card">
+                    <img alt="Buket warna cerah" src="foto\cerah.jpeg"/>
+
+                    <p class="amelia_eyebrow">STYLE NOTES / 03</p>
+
+                    <h2>Memilih Buket Sesuai Kepribadian</h2>
+
+                    <p>
+                        Kenali gaya rangkaian yang cocok untuk hadiah maupun
+                        untuk dirimu sendiri.
+                    </p>
+
+                    <button class="amelia_journal_read" data-content="Untuk gaya minimalis, pilih buket dengan satu warna dominan dan bentuk sederhana. Untuk gaya ekspresif, coba warna kontras dan bentuk yang lebih bebas. Nuansa pastel terasa lembut, sementara burgundy dan warna gelap memberi karakter yang kuat." data-title="Memilih Buket Sesuai Kepribadian">
+                        BACA CERITA &nearrow;
+                    </button>
+                </article>
+            </section>
+
+            <!-- Modal jurnal -->
+            <div class="amelia_journal_modal" hidden="" id="amelia_journal_modal">
+                <div aria-labelledby="amelia_modal_title" aria-modal="true" class="amelia_journal_modal_box" role="dialog">
+                    <button aria-label="Tutup" class="amelia_modal_close" id="amelia_journal_close" type="button">&times;</button>
+
+                    <p class="amelia_eyebrow">JURNAL AMÉLIA RYUL</p>
+
+                    <h2 id="amelia_modal_title"></h2>
+
+                    <p id="amelia_modal_content"></p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="amelia_footer">
+            <div class="amelia_container amelia_footer_grid">
+                <!-- Identitas brand -->
+                <div class="amelia_footer_brand">
+                    <a class="amelia_logo amelia_logo_footer" href="index.html">AMÉLIA <span>RYUL</span></a>
+                    <p>Bunga dengan Karakter.</p>
+                </div>
+
+                <!-- Navigasi footer -->
+                <div class="amelia_footer_column">
+                    <h2>JELAJAHI</h2>
+                    <a href="shop.html">Toko</a>
+                    <a href="collections.html">Koleksi</a>
+                    <a href="custom.html">Buket Kustom</a>
+                    <a href="about.html">Tentang Kami</a>
+                </div>
+
+                <!-- Kontak footer -->
+                <div class="amelia_footer_column">
+                    <h2>HUBUNGI</h2>
+                    <a href="journal.html">Jurnal</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+            </div>
+
+            <!-- Footer bagian bawah -->
+            <div class="amelia_container amelia_footer_bottom">
+                <p>&copy; 2026 AMÉLIA RYUL. HAK CIPTA DILINDUNGI.</p>
+                <p>BUNGA DENGAN KARAKTER.</p>
+            </div>
+        </footer>
+    </body>
+</html>

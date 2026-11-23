@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Buket Kustom | AMÉLIA RYUL</title>
+        <link href="css/amelia_style.css" rel="stylesheet"/>
+        <script defer="True" src="js/amelia_script.js">
+        </script>
+    </head>
+
+    <body>
+        <!-- Bar pengumuman -->
+        <div class="amelia_announcement">
+            <p>BUNGA YANG BISA DIRASAKAN.</p>
+        </div>
+
+        <!-- Header dan navigasi -->
+        <header class="amelia_header" id="amelia_header">
+            <div class="amelia_container amelia_header_inner">
+                <a class="amelia_logo" href="index.html">AMÉLIA <span>RYUL</span></a>
+
+                <button aria-expanded="false" aria-label="Buka menu navigasi" class="amelia_menu_toggle" id="amelia_menu_toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav aria-label="Navigasi utama" class="amelia_nav" id="amelia_nav">
+                    <a class="amelia_nav_link" href="index.html">BERANDA</a>
+                    <a class="amelia_nav_link" href="shop.html">TOKO</a>
+                    <a class="amelia_nav_link" href="collections.html">KOLEKSI</a>
+                    <a class="amelia_nav_link amelia_active" href="custom.html">PESAN KHUSUS</a>
+                    <a class="amelia_nav_link" href="about.html">TENTANG KAMI</a>
+                    <a class="amelia_nav_link" href="journal.html">JURNAL</a>
+                    <a class="amelia_nav_link" href="contact.html">KONTAK</a>
+                </nav>
+
+                <button class="amelia_bag_link amelia_cart_open" id="amelia_cart_open" type="button" aria-label="Buka keranjang belanja" title="Keranjang belanja">
+                    <svg class="amelia_cart_icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 1.9-1.5L21 8H6"/><circle cx="9.5" cy="19" r="1.3"/><circle cx="17.5" cy="19" r="1.3"/></svg>
+                    <span class="amelia_cart_count" id="amelia_cart_count">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Konten utama -->
+        <main id="amelia_main">
+            <!-- Pengantar halaman buket kustom -->
+            <section class="amelia_custom_intro amelia_container">
+                <p class="amelia_eyebrow">RANGKAIAN KHUSUS / MADE FOR YOU</p>
+
+                <h1>Made just for <em>you.</em></h1>
+
+                <p>
+                    Ceritakan bunga impianmu. Kami akan merangkainya dengan pilihan
+                    warna, jenis bunga, dan sentuhan yang kamu inginkan.
+                </p>
+            </section>
+
+            <!-- Gambar inspirasi dan formulir buket kustom -->
+            <section class="amelia_custom_section amelia_container">
+                <!-- Gambar inspirasi buket -->
+                <div class="amelia_custom_image">
+                    <img alt="Inspirasi buket kustom" src="foto\inspirasi.jpeg"/>
+                </div>
+
+                <!-- Formulir buket kustom -->
+                <form class="amelia_form_card" id="amelia_custom_form">
+                    <h2>Formulir Buket Kustom</h2>
+                    <p>Isi detail pesananmu, ya.</p>
+
+                    <!-- Input nama lengkap -->
+                    <label for="amelia_custom_name">Nama lengkap</label>
+                    <input id="amelia_custom_name" minlength="3" name="name" placeholder="Nama kamu" required="" type="text"/>
+
+                    <!-- Input nomor WhatsApp -->
+                    <label for="amelia_custom_whatsapp">Nomor WhatsApp</label>
+                    <input id="amelia_custom_whatsapp" name="whatsapp" pattern="[0-9+() -]{9,18}" placeholder="08xxxxxxxxxx" required="" type="tel"/>
+
+                    <!-- Pilihan momen -->
+                    <label for="amelia_custom_occasion">Untuk momen apa?</label>
+                    <select id="amelia_custom_occasion" name="occasion" required="">
+                        <option value="">Pilih momen</option>
+                        <option>Ulang tahun</option>
+                        <option>Wisuda</option>
+                        <option>Anniversary</option>
+                        <option>Ucapan terima kasih</option>
+                        <option>Self reward</option>
+                        <option>Lainnya</option>
+                    </select>
+
+                    <!-- Input warna bunga -->
+                    <label for="amelia_custom_color">Warna yang diinginkan</label>
+                    <input id="amelia_custom_color" name="color" placeholder="Contoh: ivory, dusty pink, burgundy" required="" type="text"/>
+
+                    <!-- Pilihan budget -->
+                    <label for="amelia_custom_budget">Budget</label>
+                    <select id="amelia_custom_budget" name="budget" required="">
+                        <option value="">Pilih budget</option>
+                        <option>Rp150.000&ndash;Rp250.000</option>
+                        <option>Rp250.000&ndash;Rp400.000</option>
+                        <option>Rp400.000&ndash;Rp600.000</option>
+                        <option>Di atas Rp600.000</option>
+                    </select>
+
+                    <!-- Input detail tambahan -->
+                    <label for="amelia_custom_notes">Detail tambahan</label>
+                    <textarea id="amelia_custom_notes" name="notes" placeholder="Jenis bunga, ukuran, kartu ucapan, atau inspirasi..." rows="4"></textarea>
+
+                    <!-- Tombol kirim permintaan -->
+                    <button class="amelia_button amelia_button_dark" type="submit">
+                        KIRIM PERMINTAAN &nearrow;
+                    </button>
+
+                    <!-- Feedback formulir -->
+                    <p class="amelia_form_feedback" id="amelia_custom_feedback" role="status"></p>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="amelia_footer">
+            <div class="amelia_container amelia_footer_grid">
+                <!-- Identitas brand -->
+                <div class="amelia_footer_brand">
+                    <a class="amelia_logo amelia_logo_footer" href="index.html">AMÉLIA <span>RYUL</span></a>
+                    <p>Bunga dengan Karakter.</p>
+                </div>
+
+                <!-- Navigasi footer -->
+                <div class="amelia_footer_column">
+                    <h2>JELAJAHI</h2>
+                    <a href="shop.html">Toko</a>
+                    <a href="collections.html">Koleksi</a>
+                    <a href="custom.html">Buket Kustom</a>
+                    <a href="about.html">Tentang Kami</a>
+                </div>
+
+                <!-- Kontak footer -->
+                <div class="amelia_footer_column">
+                    <h2>HUBUNGI</h2>
+                    <a href="journal.html">Jurnal</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+            </div>
+
+            <!-- Footer bagian bawah -->
+            <div class="amelia_container amelia_footer_bottom">
+                <p>&copy; 2026 AMÉLIA RYUL. HAK CIPTA DILINDUNGI.</p>
+                <p>BUNGA DENGAN KARAKTER.</p>
+            </div>
+        </footer>
+    </body>
+</html>
