@@ -64,8 +64,132 @@ const amelia_shop_grid=document.getElementById("amelia_shop_products");if(amelia
     cards.forEach(card=>{const product=amelia_products[card.dataset.name];if(product){card.querySelectorAll('a[href="product.html"]').forEach(a=>a.href="product.html?product="+product.slug);}});
     amelia_shop_grid.querySelectorAll(".amelia_add_button").forEach(button=>button.addEventListener("click",()=>{const name=button.dataset.product,product=amelia_products[name];if(!product)return;amelia_add_to_cart(name,product.price,1,"Regular",product.image);const original=button.textContent;button.textContent="DITAMBAHKAN ✓";setTimeout(()=>button.textContent=original,1100);}));}
 // Load selected product into shared detail page, based on product query from shop card.
-const detailAdd=document.getElementById("amelia_detail_add");if(detailAdd){const params=new URLSearchParams(location.search);const product=amelia_find_product_by_slug(params.get("product"))||amelia_products["Afterglow"];const name=Object.keys(amelia_products).find(k=>amelia_products[k]===product);const mainImage=document.getElementById("amelia_detail_main_image"),title=document.querySelector(".amelia_detail_info h1"),eyebrow=document.querySelector(".amelia_detail_info .amelia_eyebrow"),description=document.querySelector(".amelia_detail_desc"),price=document.getElementById("amelia_detail_price"),size=document.getElementById("amelia_size"),qty=document.getElementById("amelia_quantity"),feedback=document.getElementById("amelia_detail_feedback");if(title)title.textContent=name;if(eyebrow)eyebrow.textContent=product.category;if(description)description.textContent=product.desc;if(mainImage){mainImage.src=product.image;mainImage.alt="Buket "+name;}const thumbs=document.querySelectorAll(".amelia_thumb");thumbs.forEach((t,i)=>{const img=product.gallery[i]||product.image;t.dataset.image=img;const inner=t.querySelector("img");if(inner)inner.src=img;t.classList.toggle("active",i===0);t.setAttribute("aria-label","Foto "+(i+1)+" buket "+name);});if(size){size.innerHTML=`<option value="${product.price}">Regular — ${amelia_format_price(product.price)}</option><option value="${Math.round(product.price*1.35/5000)*5000}">Large — ${amelia_format_price(Math.round(product.price*1.35/5000)*5000)}</option><option value="${Math.round(product.price*1.75/5000)*5000}">Grand — ${amelia_format_price(Math.round(product.price*1.75/5000)*5000)}</option>`;}
-function updatePrice(){if(price)price.textContent=amelia_format_price(size.value);}if(size)size.addEventListener("change",updatePrice);updatePrice();const minus=document.getElementById("amelia_qty_minus"),plus=document.getElementById("amelia_qty_plus");if(minus)minus.addEventListener("click",()=>{qty.value=Math.max(1,Number(qty.value)-1);});if(plus)plus.addEventListener("click",()=>qty.value=Math.min(10,Number(qty.value)+1));if(qty)qty.addEventListener("change",()=>qty.value=Math.max(1,Math.min(10,Number(qty.value)||1)));detailAdd.addEventListener("click",()=>{const quantity=Math.max(1,Number(qty.value)||1),selectedSize=size.options[size.selectedIndex].text.split(" — ")[0];amelia_add_to_cart(name,Number(size.value),quantity,selectedSize,product.image);if(feedback)feedback.textContent=`${quantity} buket ${name} (${selectedSize}) ditambahkan ke keranjang.`;});document.querySelectorAll(".amelia_thumb").forEach(thumb=>thumb.addEventListener("click",()=>{mainImage.src=thumb.dataset.image;document.querySelectorAll(".amelia_thumb").forEach(t=>t.classList.remove("active"));thumb.classList.add("active");}));}
+const detailAdd = document.getElementById("amelia_detail_add");
+
+if (detailAdd) {
+    const params = new URLSearchParams(location.search);
+    const product = amelia_find_product_by_slug(params.get("product")) || amelia_products["Afterglow"];
+    const name = Object.keys(amelia_products).find(k => amelia_products[k] === product);
+
+    const mainImage = document.getElementById("amelia_detail_main_image");
+    const title = document.querySelector(".amelia_detail_info h1");
+    const eyebrow = document.querySelector(".amelia_detail_info .amelia_eyebrow");
+    const description = document.querySelector(".amelia_detail_desc");
+    const price = document.getElementById("amelia_detail_price");
+    const size = document.getElementById("amelia_size");
+    const qty = document.getElementById("amelia_quantity");
+    const feedback = document.getElementById("amelia_detail_feedback");
+
+    if (title) title.textContent = name;
+    if (eyebrow) eyebrow.textContent = product.category;
+    if (description) description.textContent = product.desc;
+
+    if (mainImage) {
+        mainImage.src = product.image;
+        mainImage.alt = "Buket " + name;
+    }
+
+    const thumbs = document.querySelectorAll(".amelia_thumb");
+
+    thumbs.forEach((t, i) => {
+        const img = product.gallery[i] || product.image;
+        t.dataset.image = img;
+
+        const inner = t.querySelector("img");
+        if (inner) inner.src = img;
+
+        t.classList.toggle("active", i === 0);
+        t.setAttribute("aria-label", "Foto " + (i + 1) + " buket " + name);
+    });
+
+    if (size) {
+        size.innerHTML = `
+            <option value="${product.price}">Regular — ${amelia_format_price(product.price)}</option>
+            <option value="${Math.round(product.price * 1.35 / 5000) * 5000}">
+                Large — ${amelia_format_price(Math.round(product.price * 1.35 / 5000) * 5000)}
+            </option>
+            <option value="${Math.round(product.price * 1.75 / 5000) * 5000}">
+                Grand — ${amelia_format_price(Math.round(product.price * 1.75 / 5000) * 5000)}
+            </option>
+        `;
+    }
+
+    // Memperbarui harga berdasarkan ukuran
+    function updatePrice() {
+        if (price && size) {
+            price.textContent = amelia_format_price(size.value);
+        }
+    }
+
+    if (size) size.addEventListener("change", updatePrice);
+    updatePrice();
+
+    // Tombol jumlah produk
+    const minus = document.getElementById("amelia_qty_minus");
+    const plus = document.getElementById("amelia_qty_plus");
+
+    if (minus) {
+        minus.addEventListener("click", () => {
+            qty.value = Math.max(1, Number(qty.value) - 1);
+        });
+    }
+
+    if (plus) {
+        plus.addEventListener("click", () => {
+            qty.value = Math.min(10, Number(qty.value) + 1);
+        });
+    }
+
+    if (qty) {
+        qty.addEventListener("change", () => {
+            qty.value = Math.max(1, Math.min(10, Number(qty.value) || 1));
+        });
+    }
+
+    // Tombol tambah ke keranjang
+    detailAdd.addEventListener("click", () => {
+        const quantity = Math.max(1, Number(qty.value) || 1);
+        const selectedSize = size.options[size.selectedIndex].text.split(" — ")[0];
+
+        // Menambahkan produk ke keranjang
+        amelia_add_to_cart(
+            name,
+            Number(size.value),
+            quantity,
+            selectedSize,
+            product.image
+        );
+
+        // Menampilkan notifikasi berhasil
+        if (feedback) {
+            feedback.textContent =
+                `✓ Berhasil! ${quantity} buket ${name} (${selectedSize}) ditambahkan ke keranjang.`;
+        }
+
+        // Mengembalikan jumlah ke kondisi awal
+        qty.value = 1;
+
+        // Mengembalikan ukuran ke Regular
+        size.selectedIndex = 0;
+
+        // Memperbarui harga
+        updatePrice();
+    });
+
+    // Mengganti foto utama melalui thumbnail
+    document.querySelectorAll(".amelia_thumb").forEach(thumb => {
+        thumb.addEventListener("click", () => {
+            mainImage.src = thumb.dataset.image;
+
+            document.querySelectorAll(".amelia_thumb").forEach(t => {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        });
+    });
+}
+
 // Custom bouquet form to WhatsApp
 const customForm=document.getElementById("amelia_custom_form");if(customForm)customForm.addEventListener("submit",event=>{event.preventDefault();const name=document.getElementById("amelia_custom_name").value,wa=document.getElementById("amelia_custom_whatsapp").value,occasion=document.getElementById("amelia_custom_occasion").value,color=document.getElementById("amelia_custom_color").value,budget=document.getElementById("amelia_custom_budget").value,notes=document.getElementById("amelia_custom_notes").value;amelia_open_whatsapp(`Halo AMÉLIA RYUL! Saya ingin memesan buket kustom.\nNama: ${name}\nNomor WhatsApp: ${wa}\nMomen: ${occasion}\nWarna: ${color}\nBudget: ${budget}\nDetail: ${notes||"-"}`);document.getElementById("amelia_custom_feedback").textContent="WhatsApp terbuka untuk melanjutkan permintaan buket kustom.";});
 const contactLink=document.getElementById("amelia_contact_whatsapp_link");if(contactLink){contactLink.href="https://wa.me/"+amelia_format_whatsapp(amelia_whatsapp_number);contactLink.target="_blank";contactLink.rel="noopener";}
