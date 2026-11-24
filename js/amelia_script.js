@@ -198,3 +198,23 @@ const contactForm=document.getElementById("amelia_contact_form");if(contactForm)
 const journalModal=document.getElementById("amelia_journal_modal");if(journalModal){const modalTitle=document.getElementById("amelia_modal_title"),modalContent=document.getElementById("amelia_modal_content"),close=document.getElementById("amelia_journal_close");document.querySelectorAll(".amelia_journal_read").forEach(button=>button.addEventListener("click",()=>{modalTitle.textContent=button.dataset.title;modalContent.textContent=button.dataset.content;journalModal.hidden=false;}));close.addEventListener("click",()=>journalModal.hidden=true);journalModal.addEventListener("click",event=>{if(event.target===journalModal)journalModal.hidden=true;});document.addEventListener("keydown",event=>{if(event.key==="Escape")journalModal.hidden=true;});}
 
 // General product-detail links: resolve product name from surrounding card/title or image alt.\ndocument.querySelectorAll('a[href="product.html"]').forEach(link=>{if(link.closest('.amelia_product_card'))return;const parent=link.closest('article, .amelia_product_info, .amelia_related_grid a, .amelia_collection_card');const candidate=[link.textContent,link.querySelector('img')?.alt,parent?.textContent].filter(Boolean).join(' ').trim();const productName=Object.keys(amelia_products).find(name=>candidate.toLowerCase().includes(name.toLowerCase()));if(productName)link.href='product.html?product='+amelia_products[productName].slug;});
+
+// Menghubungkan kartu bunga di halaman Beranda ke detail produk yang sesuai.
+document.querySelectorAll(".amelia_product_card").forEach(card => {
+    const link = card.querySelector(".amelia_product_image_link");
+    const heading = card.querySelector(".amelia_product_info h3");
+
+    if (!link || !heading) return;
+
+    const productName = heading.textContent.trim().toLowerCase();
+
+    const productEntry = Object.entries(amelia_products).find(
+        ([name]) => name.toLowerCase() === productName
+    );
+
+    if (productEntry) {
+        const product = productEntry[1];
+
+        link.href = "product.html?product=" + product.slug;
+    }
+});
