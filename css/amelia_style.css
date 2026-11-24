@@ -1241,3 +1241,32 @@ select {
 .amelia_cart_checkout { width:100%; margin-top:18px; }
 .amelia_cart_empty { color:var(--amelia_text); padding:20px 0; font-size:13px; }
 @media(max-width:760px){ .amelia_cart_panel{padding:20px;} }
+
+
+/* PERBAIKAN NAVIGASI AKTIF KHUSUS TAMPILAN MOBILE */
+@media (max-width: 760px) {
+
+    /* Susunan menu mobile */
+    .amelia_nav_link {
+        display: block;
+        width: 100%;
+        padding: 12px 8px;
+        border-bottom: 1px solid rgba(98, 44, 58, 0.1);
+        position: relative;
+    }
+
+    /* Hilangkan garis tambahan pada menu aktif */
+    .amelia_nav_link.amelia_active::after {
+        display: none;
+    }
+
+    /* Penanda menu yang sedang dibuka */
+    .amelia_nav_link.amelia_active {
+        color: var(--amelia_burgundy) !important;
+        font-weight: 700;
+        background-color: rgba(145, 75, 91, 0.07);
+        border-left: 3px solid var(--amelia_burgundy);
+        padding-left: 13px;
+    }
+
+}
